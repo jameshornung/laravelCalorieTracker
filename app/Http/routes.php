@@ -21,8 +21,6 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('/user', 'UserController');             
 
-Route::resource('/users', 'UserController');
+Route::resource('/meal', 'MealController');
 
-Route::resource('/addmeal', 'MealController');
 
-Route::resource('/allmeals', 'MealController');

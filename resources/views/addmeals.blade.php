@@ -8,9 +8,9 @@
                 <div class="panel-heading">Add Meals</div>
 
                 <div class="panel-body">
-                    <form action="/addmeal/{{$user->id}}" method="POST">
-                        Name of Meal: <input type="text" value="{{$user->meal}}" />
-                        Calories: <input type='decimal' value="{{$user->calories}}" />
+                    <form action="/user/{{ $user->id }}/meals" method="POST">
+                        Name of Meal: <input type="text"  />
+                        Calories: <input type='decimal'  />
                         <input type="submit" />
                     </form>
                 </div>

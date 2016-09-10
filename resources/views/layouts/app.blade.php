@@ -51,8 +51,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/addmeal') }}">Add Meal</a></li>
-                    <li><a href="{{ url('/allmeals') }}">View Meals</a></li>
+                    <li><a href="{{ url('/meal') }}">Add Meal</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

@@ -29,7 +29,8 @@ class MealController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::find(1);
+       return view('addmeals', compact('user'));
     }
 
     /**
@@ -52,7 +53,7 @@ class MealController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        $meal = $user->meal;
+        $meal = $user->meal();
 
         return view('addmeals', compact('user', 'meal'));
     }
