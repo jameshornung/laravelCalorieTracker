@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Meal extends Model
 {
-    public function user(){
-	return $this->belongsTo(User::class);
-}
+	public $fillable = [
+        'Meal', 'Calories',
+    ];
+	    public function meal(){
+		return $this->belongsTo(User::class);
+	}
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMealsTable extends Migration
+class UserIdToMeals extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,7 @@ class CreateMealsTable extends Migration
      */
     public function up()
     {
-        Schema::create('meals', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-            $table->integer('user_id');
-        });
+        //
     }
 
     /**
@@ -26,6 +22,6 @@ class CreateMealsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('meals');
+        //
     }
 }

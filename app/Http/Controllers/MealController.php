@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Meal;
+
 use App\User;
 
-class UserController extends Controller
+class MealController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-
-        return view('users', compact('users'));
+        return view('meals');
     }
 
     /**
@@ -53,10 +53,8 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $meal = $user->meal;
-        // var_export($user);
-        // var_export($meal);
 
-        return view('user', compact('user', 'meal'));
+        return view('addmeals', compact('user', 'meal'));
     }
 
     /**
@@ -67,9 +65,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        print_r($id);
-        return view('edit', compact('user'));
+        //
     }
 
     /**
@@ -81,16 +77,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        var_export($id);
-        var_export($request->name);
-        $user = User::find($id);
-        if($request->name != '')
-            {
-                $user->name = $request->name;
-            }
-            $user->save();
-
-        return redirect()->action('UserController@show', [$id]);
+        //
     }
 
     /**
